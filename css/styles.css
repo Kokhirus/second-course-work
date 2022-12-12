@@ -1,0 +1,277 @@
+* {
+    color: #ffffff;
+    font-family: "calibri";
+
+}
+
+:first-letter {
+    text-shadow: rgb(0,255,255) 0 0 1px;
+}
+
+header {
+    text-align: center;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 9001;
+}
+
+html,
+body {
+    width: auto;
+    margin: 0;
+    min-width: 500px;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.home {
+    background-image: url("../images/background.png");
+}
+
+body.page {
+    background-image: url("../images/sussybacka.png");
+}
+
+.flex {
+    display:flex;
+    align-items: center;
+}
+
+.top-menu {
+    background: rgb(123, 123, 123);
+    box-shadow: 3px 0 7px rgba(0, 0, 0, .3);
+    padding-left: 20px;
+    padding-right: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+p .menu-main {
+    z-index: 9000;
+    display:flex;
+    list-style: none;
+    margin-left: 1%;
+    padding: 0;
+    right: 20px;
+}
+
+.menu-main li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0px;
+}
+
+.button {
+    z-index: 7000;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shitgoback {
+    text-align: right; 
+    width:auto;
+}
+
+.menu-main a, .button a{ /* :not(.navbar-logo) */
+    text-decoration: none;
+    display: block;
+    position: relative;
+    line-height: 60px;
+    font-size: 18px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: .3s linear;
+}
+
+a:hover:not(.navbar-logo) {
+    background: rgba(0,0,0,.3);
+    border-radius: 10px;
+}
+
+@media (max-width:1337px) {
+    .menu-main {
+    float: none;
+    }
+
+    .menu-main a {
+    padding: 0;
+    }
+}
+
+.burger-menu {
+    z-index: 10000;
+    position:relative;
+    display:none;
+    cursor:pointer;
+    float:right;
+}
+
+.bar {
+    display: block;
+    width: 60px;
+    height: 8px;
+    margin: 13px 0;
+    transition: all 0.3s ease;
+    background-color: black;
+}
+
+@media (max-width:1137px) {
+
+    .menu-main li {
+    display:block;
+    /*opacity: 0;
+    position:absolute;*/
+    }
+    
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.active .bar:nth-child(1) {
+        transform: translateY(21px) rotate(45deg);
+    }
+    .burger-menu.active .bar:nth-child(3) {
+        transform: translateY(-21px) rotate(-45deg);
+    }
+
+    .menu-main {
+        opacity: 0;
+        visibility: hidden;
+        position:fixed;
+        margin: 0;
+        left: 0;
+        top: -100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(120, 120, 120);
+        width: 100%;
+        text-align: center;
+        transition: 0.49s;
+    }
+
+    .menu-main.active {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+section {
+    margin: 128px;
+}
+
+.switch-gif {
+    width:300px;
+    height:300px;
+    float:right;
+}
+
+.opened {
+    background: rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+legend {
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+button, email, textarea, input, date {
+    padding:5px;
+    background-color: rgba(123,123,123);
+    border-radius: 5px;
+}
+
+select {
+    padding:0px;
+    background-color: #d5edff;
+}
+
+::placeholder {
+    font-style:italic;
+    color: rgba(169,169,169)
+}
+
+:focus {
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+    margin-top:15px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+
+.iclass:hover {
+    outline: solid;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sub-gallery {
+    padding-top:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 32%;
+    position: relative;
+    overflow:hidden;
+}
+
+.im-gallery {
+    width:100%;
+}
+
+#main-container #socials {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    height: 60px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+#main-container #socials div {
+    padding: 5px;
+    position: relative;
+    margin: 0 15;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#main-container #socials div img {
+    width: 40px;
+    height: 40px;
+}
+
+#main-container #socials div a:hover{
+    border-radius: 100vh;
+}
