@@ -168,6 +168,10 @@ a:hover:not(.navbar-logo) {
         text-align: center;
         transition: 0.49s;
     }
+    
+    .menu-main.active a{
+        right:4.4vh;
+    }
 
     .menu-main.active {
         top: 0;
